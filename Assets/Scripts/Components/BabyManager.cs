@@ -1,0 +1,66 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BabyManager : PlayerController
+{
+    public GameObject[] Babies;
+    public int[] speeds = { 6, 6 };
+
+    int currentIndex = 0;  //includes rb
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        if (Babies.Length == 0)
+        {
+            Debug.LogWarning("No babies found");
+        }
+        else
+        {
+            rb = Babies[currentIndex].GetComponent<Rigidbody2D>();
+        }
+    }
+
+    bool BabiesExist()
+    {
+        return Babies.Length > 0;
+    }
+
+    protected override void InputStuff()
+    {
+        if (BabiesExist())
+        {
+            //three things need to happen for baby: interact, move, and switch
+            if (InputHandle.GetBabyInteractKey())
+            {
+                Interact();
+            }
+
+            Move(InputHandle.GetBabyMovement());
+
+            if (InputHandle.GetSwitchKey())
+            {
+                Switch();
+            }
+        }
+    }
+
+    void Switch()
+    {
+        if (Babies.Length > 0 && currentIndex < Babies.Length)
+        {
+            if (currentIndex == Babies.Length - 1)
+            {
+                currentIndex = 0;
+            }
+            else
+            {
+                currentIndex++;
+            }
+        }
+
+        rb = Babies[currentIndex].GetComponent<Rigidbody2D>();
+        speed = speeds[currentIndex];
+    }
+}

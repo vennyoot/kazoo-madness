@@ -2,51 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public abstract class PlayerController : MonoBehaviour
 {
-    public enum PlayerType { Sitter, B1, B2 }
+    protected Rigidbody2D rb;
+    public float speed;
 
-    public PlayerType playerType;
+    private void Update()
+    {
+        InputStuff();
+    }
 
-    void Awake()
+    protected abstract void InputStuff();
+
+    public void Interact()
     {
 
     }
-
-    void Start()
+    
+    public void Move(Vector2 dir)
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        MoveByPlayerType();
-    }
-
-    void MoveByPlayerType()
-    {
-        switch (playerType)
+        if (dir.x != 0 && dir.y != 0)
         {
-            case PlayerType.B1:
-
-                InputHandle.GetBabyInteractKey();
-                InputHandle.GetSwitchKey();
-                break;
-
-            case PlayerType.B2:
-
-                InputHandle.GetBabyInteractKey();
-                InputHandle.GetSwitchKey();
-                break;
-
-            case PlayerType.Sitter:
-
-                InputHandle.GetSitterInteractKey();
-                break;
-
-            default:
-                break;
+            rb.position += speed * Time.deltaTime * new Vector2(0.7071f * dir.x, 0.7071f * dir.y);
+        }
+        else
+        {
+            rb.position += speed * Time.deltaTime * dir;
         }
     }
 }
