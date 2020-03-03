@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 13994345529871513}
   - component: {fileID: 13994345529871512}
   - component: {fileID: -3867154998253949396}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 570806eef996f44419cf9c301255e91b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactRange: 0.5
   speed: 8
 --- !u!58 &-3867154998253949396
 CircleCollider2D:
