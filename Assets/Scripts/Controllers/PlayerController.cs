@@ -9,7 +9,9 @@ public abstract class PlayerController : MonoBehaviour
     protected Rigidbody2D rb;
     public float speed;
 
-    Vector3 prevDir = Vector2.zero;
+    Collider2D result;
+
+    public Vector3 prevDir = Vector2.zero;
 
     private void Update()
     {
@@ -17,15 +19,16 @@ public abstract class PlayerController : MonoBehaviour
     }
 
     protected abstract void InputStuff();
+    protected abstract void Interact(RaycastHit2D hit);
 
-    public void Interact()
+    public void CheckInteract()
     {
         //Collider2D overlap = Physics2D.OverlapBox(rb.position, rb.GetComponent<Collider2D>().bounds.size, 0, LayerMask.GetMask("Interactable"));
-        RaycastHit2D hit = Physics2D.BoxCast(rb.position, rb.GetComponent<Collider2D>().bounds.size, 0, prevDir, interactRange, LayerMask.GetMask("Interactable"));
+        RaycastHit2D hit = Physics2D.BoxCast(rb.position, rb.GetComponent<Collider2D>().bounds.size/2, 0, prevDir, interactRange, LayerMask.GetMask("Interactable"));
 
         if (hit)
         {
-            Debug.Log("Interaction occurred");
+            Interact(hit);
         }
     }
     

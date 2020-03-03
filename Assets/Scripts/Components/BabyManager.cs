@@ -5,7 +5,6 @@ using UnityEngine;
 public class BabyManager : PlayerController
 {
     public GameObject[] Babies;
-    public int[] speeds = { 6, 6 };
 
     int currentIndex = 0;  //includes rb
 
@@ -27,6 +26,14 @@ public class BabyManager : PlayerController
         return Babies.Length > 0;
     }
 
+    protected override void Interact(RaycastHit2D hit)
+    {
+        if (hit.transform.gameObject.GetComponent<Interactable>().clean)
+        {
+            Babies[currentIndex].GetComponent<BabyData>().Mess(hit);
+        }
+    }
+
     protected override void InputStuff()
     {
         if (BabiesExist())
@@ -34,10 +41,14 @@ public class BabyManager : PlayerController
             //three things need to happen for baby: interact, move, and switch
             if (InputHandle.GetBabyInteractKey())
             {
-                Interact();
+                CheckInteract();
             }
 
-            Move(InputHandle.GetBabyMovement());
+            //might remove if tapping to escape
+            if (!Babies[currentIndex].GetComponent<BabyData>().grabbed)
+            {
+                Move(InputHandle.GetBabyMovement());
+            }
 
             if (InputHandle.GetSwitchKey())
             {
@@ -61,6 +72,6 @@ public class BabyManager : PlayerController
         }
 
         rb = Babies[currentIndex].GetComponent<Rigidbody2D>();
-        speed = speeds[currentIndex];
+        speed = Babies[currentIndex].GetComponent<BabyData>().speed;
     }
 }

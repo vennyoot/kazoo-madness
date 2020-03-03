@@ -11,7 +11,12 @@ public static class InputHandle
 
     public static bool GetSitterInteractKey()
     {
-        return Input.GetKeyDown(KeyCode.LeftControl);
+        return Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.N);    //remove N before build
+    }
+
+    public static bool GetSitterPickUpKey()
+    {
+        return Input.GetKeyDown(KeyCode.LeftAlt) || Input.GetKeyDown(KeyCode.M);    //remove N before build
     }
 
     public static bool GetSwitchKey()
