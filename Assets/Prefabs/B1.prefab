@@ -1,5 +1,33 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &4026601299201144285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3652014480623412523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89915c0d91698ef419cfec2c734f6ea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  percent: 0
+  startFill: 0
+  cleanHouseMeter: {fileID: 0}
+  dirtyHouseMeter: {fileID: 0}
+  incToHouseMeter: 0.2
+  onEmpty:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onFull:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  increment: 5
 --- !u!1 &3928791912953848904
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,11 +292,18 @@ PrefabInstance:
       propertyPath: m_FillAmount
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6173012140790541399, guid: fe7e19a0e30b14c4c97935eb6a07211d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fe7e19a0e30b14c4c97935eb6a07211d, type: 3}
 --- !u!224 &6044327787226471754 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7175325709485725029, guid: fe7e19a0e30b14c4c97935eb6a07211d,
+    type: 3}
+  m_PrefabInstance: {fileID: 3490892992958941231}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3652014480623412523 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 206228233393532164, guid: fe7e19a0e30b14c4c97935eb6a07211d,
     type: 3}
   m_PrefabInstance: {fileID: 3490892992958941231}
   m_PrefabAsset: {fileID: 0}

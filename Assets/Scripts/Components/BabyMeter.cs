@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-public class Meter : MonoBehaviour
+public class BabyMeter : MonoBehaviour
 {
     Image meter;
     float prev = 0f;
@@ -18,7 +18,6 @@ public class Meter : MonoBehaviour
     public HouseMeter dirtyHouseMeter;
 
     public float incToHouseMeter = 0.1f;
-    bool broke = false;
 
     RectTransform rect;
     public UnityEvent onEmpty;
@@ -66,15 +65,12 @@ public class Meter : MonoBehaviour
         if (percent > 1)
         {
             percent = 1;
+            
         }
 
-        if (percent ==1 && broke)
-        {
-            cleanHouseMeter.AddHouse(incToHouseMeter);
-        }
         if (percent == 1)
         {
-            broke = true;
+            dirtyHouseMeter.AddHouse(incToHouseMeter);
         }
     }
 
@@ -90,9 +86,9 @@ public class Meter : MonoBehaviour
             percent = 0;
         }
 
-        if (percent ==0)
+        if (percent == 0)
         {
-            dirtyHouseMeter.AddHouse(incToHouseMeter);
+            cleanHouseMeter.AddHouse(incToHouseMeter);
         }
     }
 

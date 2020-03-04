@@ -31,7 +31,7 @@ public class BabyData : MonoBehaviour
         if (!messing)
         {
             rb = GetComponent<Rigidbody2D>();
-            GetComponentInChildren<Meter>().Add(dirtPerInteract);
+            GetComponentInChildren<BabyMeter>().Add(dirtPerInteract);
             wreckSpeed = item.transform.gameObject.GetComponent<Interactable>().cooldown;
             item.transform.gameObject.GetComponentInChildren<Meter>().Sub(wreckAmount);
             StartCoroutine(Messing(item, prevDir, interactRange));
