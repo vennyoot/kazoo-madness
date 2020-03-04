@@ -30,7 +30,7 @@ public class BabyManager : PlayerController
     {
         if (hit.transform.gameObject.GetComponent<Interactable>().cleanliness <= 1 && hit.transform.gameObject.GetComponent<Interactable>().cleanliness > 0)
         {
-            Babies[currentIndex].GetComponent<BabyData>().Mess(hit);
+            Babies[currentIndex].GetComponent<BabyData>().Mess(hit, prevDir, interactRange);
         }
     }
 

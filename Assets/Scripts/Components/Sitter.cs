@@ -87,10 +87,13 @@ public class Sitter : PlayerController
     {
         yield return new WaitForSeconds(cleanSpeed);
         //check if in range, quite coroutine if not
-        Collider2D hit = Physics2D.OverlapBox(rb.position, rb.GetComponent<Collider2D>().bounds.size + new Vector3(interactRange, interactRange), 0, LayerMask.GetMask("Interactable"));
+        //Collider2D hit = Physics2D.OverlapBox(rb.position, rb.GetComponent<Collider2D>().bounds.size + new Vector3(interactRange, interactRange), 0, LayerMask.GetMask("Interactable"));
+
+        RaycastHit2D hit = Physics2D.BoxCast(rb.position, rb.GetComponent<Collider2D>().bounds.size / 2, 0, prevDir, interactRange, LayerMask.GetMask("Interactable"));
+
         Debug.Log("Cleaning...");
 
-        if (hit)
+        if (hit == item)
         {
             Debug.Log("Clean: " + cleanSpeed);
             item.transform.gameObject.GetComponentInChildren<Meter>().Add(cleanAmount);
@@ -100,7 +103,7 @@ public class Sitter : PlayerController
             cleaning = false;
         }
 
-        if (item.transform.gameObject.GetComponentInChildren<Meter>().percent != 1 && hit)
+        if (item.transform.gameObject.GetComponentInChildren<Meter>().percent != 1 && hit == item)
         {
             StartCoroutine(Cleaning(item));
             cleaning = false;

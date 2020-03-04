@@ -45,11 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2010d437f12f48b47b81dfd36d81031a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  interactRange: 0.5
+  speed: 2
+  prevDir: {x: 0, y: 0, z: 0}
   Babies:
   - {fileID: 7136149489327124500}
   - {fileID: 3310464747229773271}
-  speeds: 0600000006000000
 --- !u!1001 &1978484622071159199
 PrefabInstance:
   m_ObjectHideFlags: 0
