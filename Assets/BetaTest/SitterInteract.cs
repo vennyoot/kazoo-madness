@@ -12,7 +12,7 @@ public class SitterInteract : Interaction
             CheckInteract();
         }
     }
-    protected override void Interact(RaycastHit2D hit)
+    protected override void Interact(Collider2D hit)
     {
         /*if (hit.transform.gameObject.GetComponent<Interactable>().cleanliness != 1f)
         {

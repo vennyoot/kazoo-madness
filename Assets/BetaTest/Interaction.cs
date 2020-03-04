@@ -19,8 +19,9 @@ public abstract class Interaction : MonoBehaviour
 
     public void CheckInteract()
     {
-        //Collider2D overlap = Physics2D.OverlapBox(rb.position, rb.GetComponent<Collider2D>().bounds.size, 0, LayerMask.GetMask("Interactable"));
-        RaycastHit2D hit = Physics2D.BoxCast(rb.position, rb.GetComponent<Collider2D>().bounds.size / 2, 0, GetComponent<Movement>().prevDir, interactRange, LayerMask.GetMask("Interactable"));
+        Collider2D hit = Physics2D.OverlapBox(rb.position, rb.GetComponent<Collider2D>().bounds.size *1.1f, 0, LayerMask.GetMask("Interactable"));
+
+        //RaycastHit2D hit = Physics2D.BoxCast(rb.position, rb.GetComponent<Collider2D>().bounds.size / 2, 0, GetComponent<Movement>().prevDir, interactRange, LayerMask.GetMask("Interactable"));
 
         if (hit)
         {
@@ -30,6 +31,6 @@ public abstract class Interaction : MonoBehaviour
     }
 
     protected abstract void InteractInput();
-    protected abstract void Interact(RaycastHit2D hit);
+    protected abstract void Interact(Collider2D hit);
 
 }
