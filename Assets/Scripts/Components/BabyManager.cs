@@ -28,7 +28,7 @@ public class BabyManager : PlayerController
 
     protected override void Interact(RaycastHit2D hit)
     {
-        if (hit.transform.gameObject.GetComponent<Interactable>().clean)
+        if (hit.transform.gameObject.GetComponent<Interactable>().cleanliness <= 1 && hit.transform.gameObject.GetComponent<Interactable>().cleanliness > 0)
         {
             Babies[currentIndex].GetComponent<BabyData>().Mess(hit);
         }

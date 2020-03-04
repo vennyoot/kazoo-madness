@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Meter : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class Meter : MonoBehaviour
     public float startFill = 0;
 
     RectTransform rect;
+    public UnityEvent onEmpty;
+    public UnityEvent onFull;
 
     [SerializeField]
     float increment = 5;
@@ -60,7 +63,7 @@ public class Meter : MonoBehaviour
     public void Sub(float magnitude)
     {
         prev = percent;
-        percent -= increment / 100f * (magnitude * 12);
+        percent -= increment / 100f * (magnitude * 20);
         lerpPercent = 0f;
         update = true;
 

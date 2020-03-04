@@ -5,8 +5,12 @@ using UnityEngine;
 public class Sitter : PlayerController
 {
     public GameObject pickedup;
-    float cooldown = 1f;
     public float cleanMultiplier = 1f;
+
+    public float cleanSpeed = 1f;
+    public bool cleaning;
+    public float cleanAmount = 0.2f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -56,10 +60,10 @@ public class Sitter : PlayerController
 
     protected override void Interact(RaycastHit2D hit)
     {
-        if (!hit.transform.gameObject.GetComponent<Interactable>().clean)
+        if (hit.transform.gameObject.GetComponent<Interactable>().cleanliness != 1f)
         {
-            cooldown = hit.transform.gameObject.GetComponent<Interactable>().cooldown * cleanMultiplier;
-            Clean();
+            cleanSpeed = hit.transform.gameObject.GetComponent<Interactable>().cooldown * cleanMultiplier;
+            Clean(hit);
             //hit.transform.gameObject.GetComponent<Interactable>().Clean(hit);
         }
 
@@ -69,16 +73,68 @@ public class Sitter : PlayerController
         }
     }
 
-    void Clean()
+    void Clean(RaycastHit2D item)
     {
-        StartCoroutine(Cleaning());
+        if (!cleaning)
+        {
+            item.transform.gameObject.GetComponentInChildren<Meter>().Add(cleanAmount);
+            StartCoroutine(Cleaning(item));
+            cleaning = true;
+        }
     }
 
-    IEnumerator Cleaning()
+    IEnumerator Cleaning(RaycastHit2D item)
     {
-        yield return new WaitForSeconds(cooldown);
+        yield return new WaitForSeconds(cleanSpeed);
         //check if in range, quite coroutine if not
-        Debug.Log("cleaning up this much: " + cooldown);
-        StartCoroutine(Cleaning());
+        Collider2D hit = Physics2D.OverlapBox(rb.position, rb.GetComponent<Collider2D>().bounds.size + new Vector3(interactRange, interactRange), 0, LayerMask.GetMask("Interactable"));
+        Debug.Log("Cleaning...");
+
+        if (hit)
+        {
+            Debug.Log("Clean: " + cleanSpeed);
+            item.transform.gameObject.GetComponentInChildren<Meter>().Add(cleanAmount);
+        }
+        else
+        {
+            cleaning = false;
+        }
+
+        if (item.transform.gameObject.GetComponentInChildren<Meter>().percent != 1 && hit)
+        {
+            StartCoroutine(Cleaning(item));
+            cleaning = false;
+        }
     }
+
+    /*public void Mess(RaycastHit2D item)
+    {
+        if (!messing)
+        {
+            rb = GetComponent<Rigidbody2D>();
+            GetComponentInChildren<Meter>().Add(dirtPerInteract);
+            wreckSpeed = item.transform.gameObject.GetComponent<Interactable>().cooldown;
+            StartCoroutine(Messing(item));
+            messing = true;
+        }
+    }
+    
+    IEnumerator Messing(RaycastHit2D item)
+    {
+        yield return new WaitForSeconds(wreckSpeed);
+        //check if in range, stop coroutine if not
+        Collider2D hit = Physics2D.OverlapBox(rb.position, rb.GetComponent<Collider2D>().bounds.size + new Vector3(0.5f, 0.5f), 0, LayerMask.GetMask("Interactable"));
+        Debug.Log("Messing...");
+        if (hit)
+        {
+            Debug.Log("Mess: " + wreckSpeed);
+            item.transform.gameObject.GetComponentInChildren<Meter>().Sub(wreckAmount);
+        }
+
+        if (item.transform.gameObject.GetComponentInChildren<Meter>().percent != 0 && hit)
+        {
+            StartCoroutine(Messing(item));
+            messing = false;
+        }
+    }*/
 }

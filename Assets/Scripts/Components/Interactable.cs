@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {
-    public bool clean = true;
+    public float cleanliness = 1f;
     public float cooldown = 1f;
+
+    bool emptyInvoke = false;
+
+    public UnityEvent empty;
 
     Meter meter;
 
@@ -16,16 +21,22 @@ public class Interactable : MonoBehaviour
 
     private void Update()
     {
-
         //TODO: cleaning cannot be bool, cleaning must be more than one state
-        if (meter.percent != 1)
+        cleanliness = meter.percent;
+
+        /*if (cleanliness <= 0)
         {
-            clean = false;
-        }
-        else
-        {
-            clean = true;
-        }
+            if (!emptyInvoke)
+            {
+                OnEmpty();
+                emptyInvoke = true;
+            }
+        }*/
+    }
+
+    void OnEmpty()
+    {
+        empty.Invoke();
     }
 
     /*public void Clean(RaycastHit2D source)
