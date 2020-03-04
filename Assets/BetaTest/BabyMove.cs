@@ -12,21 +12,12 @@ public class BabyMove : Movement
     {
         if (active)
         {
-            //might remove if tapping to escape
-            if (!grabbed)
-            {
-                Move(InputHandle.GetBabyMovement());
-            }
+            Move(InputHandle.GetBabyMovement());
         }
     }
 
-    public void SetActive()
+    public void SetActive(bool b)
     {
-        active = true;
-    }
-
-    public void SetInactive()
-    {
-        active = false;
+        active = b;
     }
 }

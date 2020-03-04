@@ -16,11 +16,11 @@ public class BabyManager : MonoBehaviour
     private void Start()
     {
         babies = FindObjectsOfType<BabyMove>();
-        
+
         if (babies.Length > 0)
         {
             currentBaby = 0;
-            babies[currentBaby].SetActive();
+            SetBabyActive(true);
         }
         else
         {
@@ -38,7 +38,7 @@ public class BabyManager : MonoBehaviour
 
     public void Switch()
     {
-        babies[currentBaby].SetInactive();
+        SetBabyActive(false);
         currentBaby++;
 
         if (currentBaby == babies.Length)
@@ -46,32 +46,12 @@ public class BabyManager : MonoBehaviour
             currentBaby = 0;
         }
 
-        babies[currentBaby].SetActive();
+        SetBabyActive(true);
+    }
 
-        /*bool tripped = false;
-        Debug.Log("Switching...");
-
-        for (int i = 0; !tripped && i < babies.Length; i++)
-        {
-            if (babies[i].active)
-            {
-                babies[i].active = false;
-                tripped = true;
-
-                if (i == babies.Length - 1)
-                {
-                    babies[0].active = true;
-                }
-                else
-                {
-                    babies[i + 1].active = true;
-                }
-            }
-        }
-
-        if (!tripped)
-        {
-            babies[0].active = true;
-        }*/
+    public void SetBabyActive(bool b)
+    {
+        babies[currentBaby].SetActive(b);
+        babies[currentBaby].GetComponent<BabyInteract>().SetActive(b);
     }
 }
