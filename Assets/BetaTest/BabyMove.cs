@@ -10,15 +10,23 @@ public class BabyMove : Movement
 
     protected override void MovementInput()
     {
-        //might remove if tapping to escape
-        if (!grabbed)
+        if (active)
         {
-            Move(InputHandle.GetBabyMovement());
+            //might remove if tapping to escape
+            if (!grabbed)
+            {
+                Move(InputHandle.GetBabyMovement());
+            }
         }
+    }
 
-        if (InputHandle.GetSwitchKey())
-        {
-            //Switch();
-        }
+    public void SetActive()
+    {
+        active = true;
+    }
+
+    public void SetInactive()
+    {
+        active = false;
     }
 }
