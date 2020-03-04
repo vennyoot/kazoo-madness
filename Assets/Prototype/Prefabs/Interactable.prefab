@@ -245,14 +245,14 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2540526474789118707, guid: fe7e19a0e30b14c4c97935eb6a07211d,
-        type: 3}
-      propertyPath: m_FillAmount
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6173012140790541399, guid: fe7e19a0e30b14c4c97935eb6a07211d,
         type: 3}
       propertyPath: startFill
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540526474789118707, guid: fe7e19a0e30b14c4c97935eb6a07211d,
+        type: 3}
+      propertyPath: m_FillAmount
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
