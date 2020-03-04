@@ -68,7 +68,7 @@ public class Meter : MonoBehaviour
             percent = 1;
         }
 
-        if (percent ==1 && broke)
+        if (percent ==1 && broke)//child
         {
             cleanHouseMeter.AddHouse(incToHouseMeter);
         }
@@ -90,7 +90,7 @@ public class Meter : MonoBehaviour
             percent = 0;
         }
 
-        if (percent ==0)
+        if (percent ==0)//child
         {
             dirtyHouseMeter.AddHouse(incToHouseMeter);
         }
