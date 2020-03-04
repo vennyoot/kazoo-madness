@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BabyManager : PlayerController
+public class BabyManage : PlayerController
 {
     public GameObject[] Babies;
 

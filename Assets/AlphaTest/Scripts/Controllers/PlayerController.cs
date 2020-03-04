@@ -6,19 +6,19 @@ public abstract class PlayerController : MonoBehaviour
 {
     public float interactRange = 0.5f;
 
-    protected Rigidbody2D rb;
-    public float speed;
+    protected Rigidbody2D rb;//
+    public float speed;//
 
     Collider2D result;
 
-    public Vector3 prevDir = Vector2.zero;
+    public Vector3 prevDir = Vector2.zero;//
 
-    private void Update()
+    private void Update()//
     {
         InputStuff();
     }
 
-    protected abstract void InputStuff();
+    protected abstract void InputStuff();//
     protected abstract void Interact(RaycastHit2D hit);
 
     public void CheckInteract()
@@ -32,7 +32,7 @@ public abstract class PlayerController : MonoBehaviour
         }
     }
     
-    public void Move(Vector2 dir)
+    public void Move(Vector2 dir)//
     {
         if (dir.x != 0 && dir.y != 0)
         {

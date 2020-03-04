@@ -16,7 +16,7 @@ public class Sitter : PlayerController
         rb = GetComponent<Rigidbody2D>();
     }
 
-    protected override void InputStuff()
+    protected override void InputStuff()//
     {
         if (InputHandle.GetSitterInteractKey())
         {
