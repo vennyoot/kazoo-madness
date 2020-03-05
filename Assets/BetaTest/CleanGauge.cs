@@ -5,18 +5,29 @@ using UnityEngine.Events;
 
 public class CleanGauge : Gauge
 {
-    public bool dirty = false;
-    public UnityEvent onUniqueEmpty;
-    public UnityEvent onUniqueFull;
+    public bool startDirty = false;
     public float cooldown = 3;
 
-    public float timer = 0;
+    bool dirty = false;
+    public UnityEvent onUniqueEmpty;
+    public UnityEvent onUniqueFull;
+
+    float timer = 0;
 
     private void Start()
     {
-        startFill = 1;
-        Add(startFill);
-        full = true;
+        if (!startDirty)
+        {
+            startFill = 1;
+            Add(startFill);
+            full = true;
+        }
+        else
+        {
+            dirty = true;
+            empty = true;
+            transform.parent.parent.GetComponent<ObjectDisplay>().onDirty();
+        }
     }
 
     protected override void AnythingElse()
