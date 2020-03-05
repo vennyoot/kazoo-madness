@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd6188248851c244598a86acd77fad78, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  clean: {fileID: 21300000, guid: 7b989cb37db929f4896dbd59d59cba8f, type: 3}
+  dirty: {fileID: 21300000, guid: 64de4840e70a6fc4da7ee9f8f6df2433, type: 3}
+  scoreWorth: 0.1
+  tapsToDestroy: 5
+  giveBabyDirt: 0.1

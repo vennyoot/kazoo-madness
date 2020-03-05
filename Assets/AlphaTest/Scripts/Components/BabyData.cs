@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class BabyData : MonoBehaviour
 {
-    public float speed = 6;
+    public float speed = 6;//
     public float wreckAmount = 0.2f;
     public float dirtPerInteract = 0.2f;
-    public bool active = false;
-    public bool grabbed = false;
-    public bool bath = false;
+    public bool active = false;//
+    public bool grabbed = false;//
+    public bool bath = false;//
     public bool messing = false;
 
     public float wreckSpeed = 1f;
