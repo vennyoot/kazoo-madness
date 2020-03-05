@@ -11,22 +11,12 @@ public class CleanGauge : Gauge
     public float cooldown = 3;
 
     public float timer = 0;
-    public bool startFull = true;
 
     private void Start()
     {
-        if (startFull)
-        {
-            startFill = 1;
-            Add(startFill);
-            full = true;
-        }
-        else
-        {
-            startFill = 0;
-            Sub(1);
-            empty = true;
-        }
+        startFill = 1;
+        Add(startFill);
+        full = true;
     }
 
     protected override void AnythingElse()
