@@ -35,7 +35,7 @@ public class ObjectDisplay : MonoBehaviour
         meter.SubWithEvent(increment * source.multiplier);
     }
 
-    void onDirty()
+    public void onDirty()
     {
         sprite.sprite = data.dirty;
 
@@ -43,7 +43,10 @@ public class ObjectDisplay : MonoBehaviour
         FindObjectOfType<HouseGauge>().Sub(data.scoreWorth);
 
         //give baby multiplier, multiplier max of 5x
-        lastDestroyer.AddToMultiplier(data.giveBabyDirt);
+        if (lastDestroyer != null)
+        {
+            lastDestroyer.AddToMultiplier(data.giveBabyDirt);
+        }
     }
 
     void onClean()
