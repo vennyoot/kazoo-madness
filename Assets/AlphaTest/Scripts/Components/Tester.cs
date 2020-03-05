@@ -12,7 +12,7 @@ public class Tester : MonoBehaviour
     {
         if (test)
         {
-            obj.GetComponent<HouseMeter>().AddHouse(0.2f);
+            obj.GetComponent<Gauge>().Sub(0.2f);
             test = false;
         }
     }

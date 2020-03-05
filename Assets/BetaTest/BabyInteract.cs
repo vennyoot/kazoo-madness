@@ -20,6 +20,7 @@ public class BabyInteract : Interaction
     }
     protected override void Interact(Collider2D item)
     {
+        
             /*if (hit.transform.gameObject.GetComponent<Interactable>().cleanliness <= 1 && hit.transform.gameObject.GetComponent<Interactable>().cleanliness > 0)
             {
                 Babies[currentIndex].GetComponent<BabyData>().Mess(hit, prevDir, interactRange);

@@ -14,7 +14,7 @@ public abstract class Gauge : MonoBehaviour
     bool update = false;
     float lerpPercent = 0f;
 
-    Image meter;
+    public Image meter;
     RectTransform rect;
     public GameObject source;
 
@@ -35,6 +35,8 @@ public abstract class Gauge : MonoBehaviour
         {
             update = false;
         }
+
+        UpdateDisplay();
     }
 
     protected virtual void UpdateDisplay()

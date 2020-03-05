@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6188248851c244598a86acd77fad78, type: 3}
   m_Name: TestFurniture
   m_EditorClassIdentifier: 
-  clean: {fileID: 0}
-  dirty: {fileID: 0}
-  scoreWorth: 0
-  tapsToDestroy: 0
-  giveBabyDirt: 0
+  clean: {fileID: 21300000, guid: 7b989cb37db929f4896dbd59d59cba8f, type: 3}
+  dirty: {fileID: 21300000, guid: 64de4840e70a6fc4da7ee9f8f6df2433, type: 3}
+  scoreWorth: 0.1
+  tapsToDestroy: 5
+  giveBabyDirt: 0.1

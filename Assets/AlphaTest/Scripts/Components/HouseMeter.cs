@@ -27,7 +27,7 @@ public class HouseMeter : MonoBehaviour
     {
         meter = GetComponent<Image>();
         rect = GetComponent<RectTransform>();
-
+        
         Add(startFill);
     }
 
