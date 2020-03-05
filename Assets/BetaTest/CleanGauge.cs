@@ -12,21 +12,35 @@ public class CleanGauge : Gauge
 
     public void SubWithEvent(float magnitude)
     {
-        Sub(magnitude);
+        if (percent != 0)
+        {
+            Sub(magnitude);
+            Debug.Log(percent);
+            full = false;
+        }
 
-        if (percent == 0)
+        if (percent == 0 && !empty)
         {
             //if empty, push house meter to dirty
+            Debug.Log("I'm empty!");
+            empty = true;
         }
     }
 
     public void AddWithEvent(float magnitude)
     {
-        Add(magnitude);
+        if (percent != 1)
+        {
+            Add(magnitude);
+            Debug.Log(percent);
+            empty = false;
+        }
 
-        if (percent == 1)
+        if (percent == 1 && !full)
         {
             //if full, push house meter to clean
+            Debug.Log("I'm full!");
+            full = true;
         }
     }
 }
