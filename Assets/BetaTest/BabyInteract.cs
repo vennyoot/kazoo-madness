@@ -37,6 +37,11 @@ public class BabyInteract : Interaction
 
     public void ResetMultiplier()
     {
+        if (meter ==null)
+        {
+            meter = GetComponentInChildren<BabyGauge>();
+        }
+
         meter.Sub(maxMultiplier);
         multiplier = 1;
     }
