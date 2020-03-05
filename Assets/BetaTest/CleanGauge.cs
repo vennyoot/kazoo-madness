@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CleanGauge : Gauge
 {
+    public bool dirty = false;
+    public UnityEvent onUniqueEmpty;
+    public UnityEvent onUniqueFull;
+
     private void Start()
     {
         startFill = 1;
@@ -24,6 +29,17 @@ public class CleanGauge : Gauge
             //if empty, push house meter to dirty
             Debug.Log("I'm empty!");
             empty = true;
+
+            //if dirty already, dont give bonus
+            if (dirty)
+            {
+                Debug.Log("I wasn't fully cleaned.");
+            }
+            else
+            {
+                onUniqueEmpty.Invoke();
+                dirty = true;
+            }
         }
     }
 
@@ -41,6 +57,17 @@ public class CleanGauge : Gauge
             //if full, push house meter to clean
             Debug.Log("I'm full!");
             full = true;
+
+            //if clean already, dont give bonus
+            if (!dirty)
+            {
+                Debug.Log("I wasn't fully dirtied.");
+            }
+            else
+            {
+                onUniqueFull.Invoke();
+                dirty = false;
+            }
         }
     }
 }
