@@ -7,6 +7,7 @@ public class ObjectDisplay : MonoBehaviour
     public ObjectData data;
     public CleanGauge meter;
     public SpriteRenderer sprite;
+    public BabyInteract lastDestroyer;
 
     public float increment = 0;
 
@@ -28,9 +29,10 @@ public class ObjectDisplay : MonoBehaviour
         meter.AddWithEvent(increment);
     }
 
-    public void TapToDestroy()
+    public void TapToDestroy(BabyInteract source)
     {
-        meter.SubWithEvent(increment);
+        lastDestroyer = source;
+        meter.SubWithEvent(increment * source.multiplier);
     }
 
     void onDirty()
@@ -41,6 +43,7 @@ public class ObjectDisplay : MonoBehaviour
         FindObjectOfType<HouseGauge>().Sub(data.scoreWorth);
 
         //give baby multiplier, multiplier max of 5x
+        lastDestroyer.AddToMultiplier(data.giveBabyDirt);
     }
 
     void onClean()

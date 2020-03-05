@@ -5,6 +5,8 @@ using UnityEngine;
 public class BabyInteract : Interaction
 {
     public bool active = false;
+    public float multiplier = 1;
+    public float maxMultiplier = 5;
 
     // Update is called once per frame
     protected override void InteractInput()
@@ -22,12 +24,26 @@ public class BabyInteract : Interaction
     {
         if (layer == LayerMask.GetMask("Interactable"))
         {
-            item.GetComponent<ObjectDisplay>().TapToDestroy();
+            item.GetComponent<ObjectDisplay>().TapToDestroy(this);
         }
     }
 
     public void SetActive(bool b)
     {
         active = b;
+    }
+
+    public void ResetMultiplier()
+    {
+        multiplier = 1;
+    }
+
+    public void AddToMultiplier(float magnitude)
+    {
+        multiplier += magnitude;
+        if (multiplier > maxMultiplier)
+        {
+            multiplier = maxMultiplier;
+        }
     }
 }

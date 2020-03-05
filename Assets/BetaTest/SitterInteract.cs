@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SitterInteract : Interaction
 {
+    public GameObject child;
+
     protected override void InteractInput()
     {
         if (InputHandle.GetSitterInteractKey())
@@ -14,8 +16,16 @@ public class SitterInteract : Interaction
 
         if (InputHandle.GetSitterPickUpKey())
         {
-            Debug.Log("Picking up...");
-            CheckInteract(LayerMask.GetMask("Pickupable"));
+            if (child == null)
+            {
+                Debug.Log("Picking up...");
+                CheckInteract(LayerMask.GetMask("Pickupable"));
+            }
+            else
+            {
+                //drop child
+                Drop();
+            }
         }
     }
     protected override void Interact(Collider2D hit, LayerMask layer)
@@ -28,11 +38,36 @@ public class SitterInteract : Interaction
         if (layer == LayerMask.GetMask("Pickupable"))
         {
             //pick up child
+            PickUp(hit);
         }
+    }
+
+    void PickUp(Collider2D hit)
+    {
+        child = hit.gameObject;
+        child.GetComponent<BabyMove>().grabbed = true;
+        child.GetComponent<Collider2D>().enabled = false;
+        child.transform.parent = transform;
+    }
+
+    void Drop()
+    {
+        child.transform.parent = null;
+        child.GetComponent<BabyMove>().grabbed = false;
+        child.GetComponent<Collider2D>().enabled = true;
+        child = null;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //place in bath if have picked up child
+        if (child != null && collision.gameObject.GetComponent<Bath>())
+        {
+            if (collision.gameObject.GetComponent<Bath>().child == null)
+            {
+                collision.gameObject.GetComponent<Bath>().BathTime(child);
+                child.GetComponent<BabyMove>().grabbed = false;
+                child = null;
+            }
+        }
     }
 }

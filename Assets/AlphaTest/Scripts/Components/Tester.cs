@@ -11,12 +11,6 @@ public class Tester : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (test1)
-        {
-            obj.GetComponent<ObjectDisplay>().TapToDestroy();
-            test1 = false;
-        }
-
         if (test2)
         {
             obj.GetComponent<ObjectDisplay>().TapToClean();
