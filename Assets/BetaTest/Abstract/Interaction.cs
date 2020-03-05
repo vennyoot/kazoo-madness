@@ -17,20 +17,20 @@ public abstract class Interaction : MonoBehaviour
         InteractInput();
     }
 
-    public void CheckInteract()
+    public void CheckInteract(LayerMask layer)
     {
-        Collider2D hit = Physics2D.OverlapBox(rb.position, rb.GetComponent<Collider2D>().bounds.size *1.1f, 0, LayerMask.GetMask("Interactable"));
+        Collider2D hit = Physics2D.OverlapBox(rb.position, rb.GetComponent<Collider2D>().bounds.size *1.1f, 0, layer);
 
         //RaycastHit2D hit = Physics2D.BoxCast(rb.position, rb.GetComponent<Collider2D>().bounds.size / 2, 0, GetComponent<Movement>().prevDir, interactRange, LayerMask.GetMask("Interactable"));
 
         if (hit)
         {
             Debug.Log("Found interaction");
-            Interact(hit);
+            Interact(hit, layer);
         }
     }
 
     protected abstract void InteractInput();
-    protected abstract void Interact(Collider2D hit);
+    protected abstract void Interact(Collider2D hit, LayerMask layer);
 
 }

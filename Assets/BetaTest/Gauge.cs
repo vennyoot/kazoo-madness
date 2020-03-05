@@ -18,7 +18,7 @@ public abstract class Gauge : MonoBehaviour
     float lerpPercent = 0f;
 
     public Image meter;
-    RectTransform rect;
+    public RectTransform rect;
     //public GameObject source;
 
     private void Awake()
@@ -40,12 +40,19 @@ public abstract class Gauge : MonoBehaviour
         }
 
         UpdateDisplay();
+        AnythingElse();
     }
+
+    protected abstract void AnythingElse();
 
     protected virtual void UpdateDisplay()
     {
-        rect.position = Camera.main.WorldToScreenPoint(transform.parent.parent.position);// + (Vector3.up * offset));
         meter.fillAmount = Mathf.Lerp(prev, percent, lerpPercent);
+        //10, 221, 0
+        //133, 1, 23
+        meter.color = new Color(Mathf.Lerp(133f/255, 10f / 255,percent),
+            Mathf.Lerp( 1f/255, 221f / 255, percent),
+            Mathf.Lerp(23f/255, 0f, percent));
     }
 
     public virtual void Add(float magnitude)

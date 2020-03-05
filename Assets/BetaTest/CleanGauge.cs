@@ -8,11 +8,39 @@ public class CleanGauge : Gauge
     public bool dirty = false;
     public UnityEvent onUniqueEmpty;
     public UnityEvent onUniqueFull;
+    public float cooldown = 3;
+
+    public float timer = 0;
 
     private void Start()
     {
         startFill = 1;
         Add(startFill);
+        full = true;
+    }
+
+    protected override void AnythingElse()
+    {
+        rect.position = Camera.main.WorldToScreenPoint(transform.parent.parent.position);// + (Vector3.up * offset));
+
+        timer += Time.deltaTime;
+
+        if (timer > cooldown)
+        {
+            if (dirty && !empty)
+            {
+                Sub(1);
+                Debug.Log("Recovering dirt");
+                empty = true;
+            }
+            
+            if (!dirty && !full)
+            {
+                Add(1);
+                Debug.Log("Recovering clean");
+                full = true;
+            }
+        }
     }
 
     public void SubWithEvent(float magnitude)
@@ -21,12 +49,12 @@ public class CleanGauge : Gauge
         {
             Sub(magnitude);
             Debug.Log(percent);
+            timer = 0;
             full = false;
         }
 
         if (percent == 0 && !empty)
         {
-            //if empty, push house meter to dirty
             Debug.Log("I'm empty!");
             empty = true;
 
@@ -49,12 +77,12 @@ public class CleanGauge : Gauge
         {
             Add(magnitude);
             Debug.Log(percent);
+            timer = 0;
             empty = false;
         }
 
         if (percent == 1 && !full)
         {
-            //if full, push house meter to clean
             Debug.Log("I'm full!");
             full = true;
 

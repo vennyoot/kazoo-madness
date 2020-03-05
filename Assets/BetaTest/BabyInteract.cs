@@ -14,18 +14,16 @@ public class BabyInteract : Interaction
             if (InputHandle.GetBabyInteractKey())
             {
                 Debug.Log("Interacting...");
-                CheckInteract();
+                CheckInteract(LayerMask.GetMask("Interactable"));
             }
         }
     }
-    protected override void Interact(Collider2D item)
+    protected override void Interact(Collider2D item, LayerMask layer)
     {
-        
-            /*if (hit.transform.gameObject.GetComponent<Interactable>().cleanliness <= 1 && hit.transform.gameObject.GetComponent<Interactable>().cleanliness > 0)
-            {
-                Babies[currentIndex].GetComponent<BabyData>().Mess(hit, prevDir, interactRange);
-            }*/
-        
+        if (layer == LayerMask.GetMask("Interactable"))
+        {
+            item.GetComponent<ObjectDisplay>().TapToDestroy();
+        }
     }
 
     public void SetActive(bool b)

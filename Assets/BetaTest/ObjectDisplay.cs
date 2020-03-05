@@ -36,12 +36,18 @@ public class ObjectDisplay : MonoBehaviour
     void onDirty()
     {
         sprite.sprite = data.dirty;
+
         //give score worth to house meter
+        FindObjectOfType<HouseGauge>().Sub(data.scoreWorth);
+
+        //give baby multiplier, multiplier max of 5x
     }
 
     void onClean()
     {
         sprite.sprite = data.clean;
+
         //give score worth to house meter
+        FindObjectOfType<HouseGauge>().Add(data.scoreWorth);
     }
 }

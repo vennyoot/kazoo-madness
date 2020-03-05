@@ -9,21 +9,30 @@ public class SitterInteract : Interaction
         if (InputHandle.GetSitterInteractKey())
         {
             Debug.Log("Interacting...");
-            CheckInteract();
+            CheckInteract(LayerMask.GetMask("Interactable"));
+        }
+
+        if (InputHandle.GetSitterPickUpKey())
+        {
+            Debug.Log("Picking up...");
+            CheckInteract(LayerMask.GetMask("Pickupable"));
         }
     }
-    protected override void Interact(Collider2D hit)
+    protected override void Interact(Collider2D hit, LayerMask layer)
     {
-        /*if (hit.transform.gameObject.GetComponent<Interactable>().cleanliness != 1f)
+        if (layer == LayerMask.GetMask("Interactable"))
         {
-            cleanSpeed = hit.transform.gameObject.GetComponent<Interactable>().cooldown * cleanMultiplier;
-            Clean(hit);
-            //hit.transform.gameObject.GetComponent<Interactable>().Clean(hit);
+            hit.GetComponent<ObjectDisplay>().TapToClean();
         }
 
-        if (hit.transform.gameObject.GetComponent<Bath>())
+        if (layer == LayerMask.GetMask("Pickupable"))
         {
+            //pick up child
+        }
+    }
 
-        }*/
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //place in bath if have picked up child
     }
 }
