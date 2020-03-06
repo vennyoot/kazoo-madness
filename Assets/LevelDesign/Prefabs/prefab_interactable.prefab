@@ -236,8 +236,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4576928fbaa522246b27c0a8d399e270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onBreak: {fileID: 0}
-  onClean: {fileID: 0}
+  onBreak: {fileID: 8300000, guid: 27a32a3464322894cbaf27d0ccf7e7b4, type: 3}
+  onClean: {fileID: 8300000, guid: 68d126de543a7e84b9da93cfff062159, type: 3}
 --- !u!114 &8456846626348287510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,11 +276,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6615289250294471100}
     m_Modifications:
-    - target: {fileID: 5829192442518626563, guid: b3632dfb8c7770547933b7bdfdfb7a2b,
-        type: 3}
-      propertyPath: m_Name
-      value: prefab_altgauge
-      objectReference: {fileID: 0}
     - target: {fileID: 5829192442518626575, guid: b3632dfb8c7770547933b7bdfdfb7a2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -385,6 +380,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5829192442518626563, guid: b3632dfb8c7770547933b7bdfdfb7a2b,
+        type: 3}
+      propertyPath: m_Name
+      value: prefab_altgauge
       objectReference: {fileID: 0}
     - target: {fileID: 5829192442141456007, guid: b3632dfb8c7770547933b7bdfdfb7a2b,
         type: 3}

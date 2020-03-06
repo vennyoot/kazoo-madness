@@ -213,9 +213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a79681ca80cd8418c432d5eafa42dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 0}
-  onBabyWin: {fileID: 0}
-  onSitterWin: {fileID: 0}
+  onBabyWin: {fileID: 8300000, guid: 6cb140d742488d547a33359dc05e4250, type: 3}
+  onSitterWin: {fileID: 8300000, guid: 6cb140d742488d547a33359dc05e4250, type: 3}
 --- !u!1001 &6093735951866351314
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -223,11 +222,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6513262374526545208, guid: 68947f9c2d622204c824ea9f39661069,
-        type: 3}
-      propertyPath: m_Name
-      value: prefab_housegauge
-      objectReference: {fileID: 0}
     - target: {fileID: 6513262374526545204, guid: 68947f9c2d622204c824ea9f39661069,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -333,6 +327,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6513262374284114623, guid: 68947f9c2d622204c824ea9f39661069,
+        type: 3}
+      propertyPath: m_Name
+      value: BG
+      objectReference: {fileID: 0}
+    - target: {fileID: 6513262374526545208, guid: 68947f9c2d622204c824ea9f39661069,
+        type: 3}
+      propertyPath: m_Name
+      value: prefab_housegauge
+      objectReference: {fileID: 0}
     - target: {fileID: 6513262374284114620, guid: 68947f9c2d622204c824ea9f39661069,
         type: 3}
       propertyPath: m_SizeDelta.y
@@ -347,11 +351,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 462
-      objectReference: {fileID: 0}
-    - target: {fileID: 6513262374284114623, guid: 68947f9c2d622204c824ea9f39661069,
-        type: 3}
-      propertyPath: m_Name
-      value: BG
       objectReference: {fileID: 0}
     - target: {fileID: 6513262374284114621, guid: 68947f9c2d622204c824ea9f39661069,
         type: 3}
