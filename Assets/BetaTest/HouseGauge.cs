@@ -19,11 +19,6 @@ public class HouseGauge : Gauge
         
     }
 
-    protected override void UpdateDisplay()
-    {
-        meter.fillAmount = Mathf.Lerp(prev, percent, lerpPercent);
-    }
-
     public override void Sub(float magnitude)
     {
         base.Sub(magnitude);

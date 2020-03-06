@@ -13,9 +13,9 @@ public abstract class Gauge : MonoBehaviour
     public bool full = false;
     public bool empty = false;
 
-    public float prev = 0f;
+    float prev = 0f;
     bool update = false;
-    public float lerpPercent = 0f;
+    float lerpPercent = 0f;
 
     public Image meter;
     public RectTransform rect;
@@ -50,9 +50,7 @@ public abstract class Gauge : MonoBehaviour
         meter.fillAmount = Mathf.Lerp(prev, percent, lerpPercent);
         //10, 221, 0
         //133, 1, 23
-        meter.color = new Color(Mathf.Lerp(133f/255, 10f / 255,percent),
-            Mathf.Lerp( 1f/255, 221f / 255, percent),
-            Mathf.Lerp(23f/255, 0f, percent));
+        //meter.color = new Color(Mathf.Lerp(133f/255, 10f / 255,percent),Mathf.Lerp( 1f/255, 221f / 255, percent),Mathf.Lerp(23f/255, 0f, percent));
     }
 
     public virtual void Add(float magnitude)
