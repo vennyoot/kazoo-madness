@@ -13,9 +13,9 @@ public abstract class Gauge : MonoBehaviour
     public bool full = false;
     public bool empty = false;
 
-    float prev = 0f;
+    public float prev = 0f;
     bool update = false;
-    float lerpPercent = 0f;
+    public float lerpPercent = 0f;
 
     public Image meter;
     public RectTransform rect;

@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -276,11 +276,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6615289250294471100}
     m_Modifications:
-    - target: {fileID: 5829192442518626563, guid: b3632dfb8c7770547933b7bdfdfb7a2b,
-        type: 3}
-      propertyPath: m_Name
-      value: prefab_altgauge
-      objectReference: {fileID: 0}
     - target: {fileID: 5829192442518626575, guid: b3632dfb8c7770547933b7bdfdfb7a2b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -385,6 +380,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5829192442518626563, guid: b3632dfb8c7770547933b7bdfdfb7a2b,
+        type: 3}
+      propertyPath: m_Name
+      value: prefab_altgauge
       objectReference: {fileID: 0}
     - target: {fileID: 5829192442141456007, guid: b3632dfb8c7770547933b7bdfdfb7a2b,
         type: 3}
