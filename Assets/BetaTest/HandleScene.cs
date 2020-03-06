@@ -12,6 +12,11 @@ public class HandleScene : MonoBehaviour
             FindObjectOfType<HouseGauge>().onEmpty.AddListener(LoadBabyWinEnd);
             FindObjectOfType<HouseGauge>().onFull.AddListener(LoadSitterWinEnd);
         }
+
+        if (SceneManager.GetActiveScene().name == "START_THIS")
+        {
+            SceneManager.LoadScene("Menu");
+        }
     }
 
     private void Update()

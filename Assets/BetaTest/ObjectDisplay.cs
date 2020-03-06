@@ -56,6 +56,6 @@ public class ObjectDisplay : MonoBehaviour
         GetComponent<AudioItem>().OnClean();
 
         //give score worth to house meter
-        FindObjectOfType<HouseGauge>().Add(data.scoreWorth);
+        FindObjectOfType<HouseGauge>().Add(data.scoreWorth * 0.1f);
     }
 }

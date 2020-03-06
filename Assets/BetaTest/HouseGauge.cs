@@ -13,7 +13,7 @@ public class HouseGauge : Gauge
     {
         meter = GetComponent<Image>();
         rect = GetComponent<RectTransform>();
-        startFill = 1;
+        startFill = 0.999999f;
         Add(startFill);
     }
 
@@ -30,6 +30,16 @@ public class HouseGauge : Gauge
         {
             Debug.Log("House meter empty?");
             onEmpty.Invoke();
+        }
+    }
+
+    public override void Add(float magnitude)
+    {
+        base.Add(magnitude);
+
+        if (percent == 1)
+        {
+            onFull.Invoke();
         }
     }
 }
