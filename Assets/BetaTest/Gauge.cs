@@ -20,14 +20,7 @@ public abstract class Gauge : MonoBehaviour
     public Image meter;
     public RectTransform rect;
     //public GameObject source;
-
-    private void Awake()
-    {
-        meter = GetComponent<Image>();
-        rect = GetComponent<RectTransform>();
-        //source = transform.parent.parent.gameObject;
-    }
-
+    
     private void Update()
     {
         if (lerpPercent < 1 && update == true)

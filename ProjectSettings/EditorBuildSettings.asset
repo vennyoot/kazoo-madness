@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/LevelDesign/Prototype-Level.unity
     guid: 68bdf12473bcac24bab99424e058e87d
+  - enabled: 1
+    path: Assets/LevelDesign/Menu.unity
+    guid: 08d42847eeea3bf4d9417d9a8c96ddfc
+  - enabled: 1
+    path: Assets/LevelDesign/KazooMadness.unity
+    guid: 873207eb62c1d3e4dbedc17f442332c2
+  - enabled: 1
+    path: Assets/LevelDesign/BabyWin.unity
+    guid: 4692bb476c3bb7a4eaa7bfe4c59ffaab
+  - enabled: 1
+    path: Assets/LevelDesign/SitterWin.unity
+    guid: d367f7e04157b044395fdfe40e992ed4
   m_configObjects: {}

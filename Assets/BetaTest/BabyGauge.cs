@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BabyGauge : Gauge
 {
     private void Start()
     {
+        meter = GetComponent<Image>();
+        rect = GetComponent<RectTransform>();
         startFill = 0;
     }
 
