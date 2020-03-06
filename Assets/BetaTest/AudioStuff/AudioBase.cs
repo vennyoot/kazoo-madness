@@ -5,7 +5,7 @@ using UnityEngine;
 public class AudioBase : MonoBehaviour
 {
 
-    public AudioSource audio;
+    protected AudioSource audio;
     private void Awake()
     {
         audio = GetComponent<AudioSource>();
