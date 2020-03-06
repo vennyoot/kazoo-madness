@@ -7,12 +7,12 @@ public class AudioItem : AudioBase
     public AudioClip onBreak;
     public AudioClip onClean;
 
-    void OnBreak()
+    public void OnBreak()
     {
         PlayAudio(onBreak);
     }
 
-    void OnClean()
+    public void OnClean()
     {
         PlayAudio(onClean);
     }

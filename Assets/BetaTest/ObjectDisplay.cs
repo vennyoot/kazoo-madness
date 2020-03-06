@@ -39,6 +39,7 @@ public class ObjectDisplay : MonoBehaviour
     {
         sprite.sprite = data.dirty;
 
+        GetComponent<AudioItem>().OnBreak();
         //give score worth to house meter
         FindObjectOfType<HouseGauge>().Sub(data.scoreWorth);
 
@@ -52,6 +53,7 @@ public class ObjectDisplay : MonoBehaviour
     void onClean()
     {
         sprite.sprite = data.clean;
+        GetComponent<AudioItem>().OnClean();
 
         //give score worth to house meter
         FindObjectOfType<HouseGauge>().Add(data.scoreWorth);

@@ -33,6 +33,7 @@ public class BabyManager : MonoBehaviour
         if (InputHandle.GetSwitchKey())
         {
             Switch();
+            GetComponent<AudioSwitch>().OnSwitch();
         }
     }
 
