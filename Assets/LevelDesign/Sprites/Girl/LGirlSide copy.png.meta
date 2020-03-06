@@ -1,7 +1,19 @@
 fileFormatVersion: 2
-guid: d04afc08c6557874b8a5e7da31935d23
+guid: 4c0adbd128e2a3141a0cf6a632987c9d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4377969497906930331
+    second: LGirlSide copy_0
+  - first:
+      213: -7792655199105868715
+    second: LGirlSide copy_1
+  - first:
+      213: 2672388867320302758
+    second: LGirlSide copy_2
+  - first:
+      213: 8086176411012622487
+    second: LGirlSide copy_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -120,7 +132,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: LGirlSide copy_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 93
+        width: 56
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf521877e0f001d4b9ed9f8bc700deb7
+      internalID: 4377969497906930331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LGirlSide copy_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 93
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca478928f0d863438e6360bfae4fa8d
+      internalID: -7792655199105868715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LGirlSide copy_2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 24
+        width: 61
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b22b249f182386479de4abea6d4d845
+      internalID: 2672388867320302758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LGirlSide copy_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 24
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6efcbbc52f7c9744819125c75f656b6
+      internalID: 8086176411012622487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

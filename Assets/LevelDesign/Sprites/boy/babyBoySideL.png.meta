@@ -1,7 +1,19 @@
 fileFormatVersion: 2
-guid: d04afc08c6557874b8a5e7da31935d23
+guid: 65a479f445587dd4da7279c1f15b9d25
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7039576453462880410
+    second: babyBoySideL_0
+  - first:
+      213: -7226936661693897563
+    second: babyBoySideL_1
+  - first:
+      213: -30654284934708431
+    second: babyBoySideL_2
+  - first:
+      213: -6168834022094023127
+    second: babyBoySideL_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -120,7 +132,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: babyBoySideL_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 87
+        width: 68
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf0ff63bb1d6ed49a61b133df617cad
+      internalID: 7039576453462880410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: babyBoySideL_1
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 87
+        width: 60
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf30706a781838f4d9655e829c069d9c
+      internalID: -7226936661693897563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: babyBoySideL_2
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 7
+        width: 74
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278ca07c77afc454b9e031785699ab33
+      internalID: -30654284934708431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: babyBoySideL_3
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 7
+        width: 60
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8090bb12cb0a4624ab471e7648fad102
+      internalID: -6168834022094023127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

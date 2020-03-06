@@ -1,7 +1,19 @@
 fileFormatVersion: 2
-guid: d04afc08c6557874b8a5e7da31935d23
+guid: 85f4d110f3ac85e46a5957577c56a505
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6881305756880014444
+    second: DLside_0
+  - first:
+      213: 560776652608414055
+    second: DLside_1
+  - first:
+      213: -1551277193585354808
+    second: DLside_2
+  - first:
+      213: -5110692293361142157
+    second: DLside_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -120,7 +132,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: DLside_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 93
+        width: 56
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7232930e8512914db6c27b2b923e8ce
+      internalID: -6881305756880014444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DLside_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 91
+        width: 50
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c005091580bccc4795e8daafd11c1c0
+      internalID: 560776652608414055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DLside_2
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 24
+        width: 61
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c3f087781709434abc79f15f990bcd1
+      internalID: -1551277193585354808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DLside_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 24
+        width: 50
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b688e69418b63e40b4b64128789e5dd
+      internalID: -5110692293361142157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
