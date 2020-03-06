@@ -41,7 +41,7 @@ public class ObjectDisplay : MonoBehaviour
 
         GetComponent<AudioItem>().OnBreak();
         //give score worth to house meter
-        FindObjectOfType<HouseGauge>().Sub(data.scoreWorth);
+        FindObjectOfType<HouseGauge>().Sub(data.scoreWorth * 0.1f);
 
         //give baby multiplier, multiplier max of 5x
         if (lastDestroyer != null)
