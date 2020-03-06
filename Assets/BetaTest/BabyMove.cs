@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BabyMove : Movement
 {
-    public Animator _anim;
+    private Animator _anim;
  
     public bool active = false;
     public bool grabbed = false;
