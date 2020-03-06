@@ -1,19 +1,7 @@
 fileFormatVersion: 2
-guid: 3ffa583301e186c469040f7490ce8b20
+guid: cb6fb1ef68a1e934f9a3f1f26da6b374
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 873553918527278366
-    second: RobotSideFix_0
-  - first:
-      213: -6772877508633168347
-    second: RobotSideFix_1
-  - first:
-      213: -5632693915799337511
-    second: RobotSideFix_2
-  - first:
-      213: -3640207109444126270
-    second: RobotSideFix_3
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -52,12 +40,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -132,91 +120,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: RobotSideFix_0
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 30
-        width: 72
-        height: 121
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14899e187199eab46bf9a74727a12a19
-      internalID: 873553918527278366
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RobotSideFix_1
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 30
-        width: 72
-        height: 121
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a6bb53d6f5df0643934b3009d1b3f7b
-      internalID: -6772877508633168347
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RobotSideFix_2
-      rect:
-        serializedVersion: 2
-        x: 178
-        y: 30
-        width: 72
-        height: 121
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c458711fd8a312c4d8f7c7967bb9af13
-      internalID: -5632693915799337511
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RobotSideFix_3
-      rect:
-        serializedVersion: 2
-        x: 259
-        y: 30
-        width: 71
-        height: 121
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9224319ab89b35c4fad7bc29a0fb81b6
-      internalID: -3640207109444126270
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []

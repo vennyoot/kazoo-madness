@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 6597d05578496264e8da67f145e47992
+guid: 7503eba060362be4fa38c84c1972d7c1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8513695586741338882
-    second: RobotBackFix_0
+      213: -5436782420260980640
+    second: babyBoySideDirtyL_0
   - first:
-      213: 7569070090285554532
-    second: RobotBackFix_1
+      213: 2887080365927005145
+    second: babyBoySideDirtyL_1
   - first:
-      213: 3715695632448508556
-    second: RobotBackFix_2
+      213: 9161064645044576614
+    second: babyBoySideDirtyL_2
   - first:
-      213: 2830415780575455084
-    second: RobotBackFix_3
+      213: 4975341169495364956
+    second: babyBoySideDirtyL_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -134,13 +134,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RobotBackFix_0
+      name: babyBoySideDirtyL_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 30
-        width: 77
-        height: 121
+        x: 22
+        y: 93
+        width: 57
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,20 +148,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1730552fd3b73e348ba3248c56be4f27
-      internalID: -8513695586741338882
+      spriteID: 3cca2dd2f72538d448a098e27a66cf79
+      internalID: -5436782420260980640
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBackFix_1
+      name: babyBoySideDirtyL_1
       rect:
         serializedVersion: 2
-        x: 89
-        y: 30
-        width: 71
-        height: 121
+        x: 96
+        y: 91
+        width: 50
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e656b77f7e04494db28476b89e62950
-      internalID: 7569070090285554532
+      spriteID: 679a537ffcb310c4fbb14d89389732e7
+      internalID: 2887080365927005145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBackFix_2
+      name: babyBoySideDirtyL_2
       rect:
         serializedVersion: 2
-        x: 167
-        y: 30
-        width: 77
-        height: 121
+        x: 22
+        y: 24
+        width: 62
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,20 +190,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c8e9f466451361459326a358420a7fb
-      internalID: 3715695632448508556
+      spriteID: 168ce3e4a2d78f840b9d9b8ea4ab6c77
+      internalID: 9161064645044576614
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotBackFix_3
+      name: babyBoySideDirtyL_3
       rect:
         serializedVersion: 2
-        x: 251
-        y: 30
-        width: 71
-        height: 121
+        x: 96
+        y: 24
+        width: 50
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,8 +211,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58b31d9a3347a0b4aa634fa804cba7a1
-      internalID: 2830415780575455084
+      spriteID: ac7accd2c5284954e9e216d540e205e6
+      internalID: 4975341169495364956
       vertices: []
       indices: 
       edges: []

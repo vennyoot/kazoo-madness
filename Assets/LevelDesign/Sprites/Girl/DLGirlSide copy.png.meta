@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 9f11bfdf86833134c9603060615add7e
+guid: deee09cfc26798143818d26c306265cf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -694563421349494164
-    second: RobotFrontFix_0
+      213: 6604246285959027986
+    second: DLGirlSide copy_0
   - first:
-      213: 3205659162527227798
-    second: RobotFrontFix_1
+      213: 5234027139774448940
+    second: DLGirlSide copy_1
   - first:
-      213: 5286025471455911598
-    second: RobotFrontFix_2
+      213: -3435878448359341532
+    second: DLGirlSide copy_2
   - first:
-      213: -4355272269101550845
-    second: RobotFrontFix_3
+      213: 6397622184574921664
+    second: DLGirlSide copy_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -134,13 +134,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RobotFrontFix_0
+      name: DLGirlSide copy_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 30
-        width: 78
-        height: 121
+        x: 23
+        y: 93
+        width: 56
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,20 +148,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab9ddb818bb50594f8fe57c4b8ac68f4
-      internalID: -694563421349494164
+      spriteID: 00893867b5810b14f99bb2f4eebea8f9
+      internalID: 6604246285959027986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotFrontFix_1
+      name: DLGirlSide copy_1
       rect:
         serializedVersion: 2
-        x: 89
-        y: 30
-        width: 74
-        height: 121
+        x: 96
+        y: 91
+        width: 50
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 740e4fa0d9cf3af419ddd9df432af4f6
-      internalID: 3205659162527227798
+      spriteID: c5d2414bfc829da46b5874883cdf8db2
+      internalID: 5234027139774448940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotFrontFix_2
+      name: DLGirlSide copy_2
       rect:
         serializedVersion: 2
-        x: 170
-        y: 30
-        width: 78
-        height: 121
+        x: 23
+        y: 24
+        width: 61
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,20 +190,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb79d80afda7cf547bb44883b59b729f
-      internalID: 5286025471455911598
+      spriteID: 96de70a5d0478644a88b7936c328847f
+      internalID: -3435878448359341532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotFrontFix_3
+      name: DLGirlSide copy_3
       rect:
         serializedVersion: 2
-        x: 255
-        y: 30
-        width: 72
-        height: 121
+        x: 96
+        y: 24
+        width: 50
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,8 +211,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa98d256139f6f540b04150a01ea48a3
-      internalID: -4355272269101550845
+      spriteID: 3101cb79163dd384493c8801405367c4
+      internalID: 6397622184574921664
       vertices: []
       indices: 
       edges: []

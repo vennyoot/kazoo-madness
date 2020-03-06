@@ -5,6 +5,12 @@ using UnityEngine;
 public class SitterInteract : Interaction
 {
     public GameObject child;
+    private Animator _anim;
+
+    private void Start()
+    {
+        _anim = GetComponent<Animator>();
+    }
 
     protected override void InteractInput()
     {
@@ -12,6 +18,11 @@ public class SitterInteract : Interaction
         {
             Debug.Log("Interacting...");
             CheckInteract(LayerMask.GetMask("Interactable"));
+            _anim.SetBool("Fix", true);
+        }
+        else
+        {
+            _anim.SetBool("Fix", false);
         }
 
         if (InputHandle.GetSitterPickUpKey())

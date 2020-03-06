@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 9f11bfdf86833134c9603060615add7e
+guid: 65a479f445587dd4da7279c1f15b9d25
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -694563421349494164
-    second: RobotFrontFix_0
+      213: 7039576453462880410
+    second: babyBoySideL_0
   - first:
-      213: 3205659162527227798
-    second: RobotFrontFix_1
+      213: -7226936661693897563
+    second: babyBoySideL_1
   - first:
-      213: 5286025471455911598
-    second: RobotFrontFix_2
+      213: -30654284934708431
+    second: babyBoySideL_2
   - first:
-      213: -4355272269101550845
-    second: RobotFrontFix_3
+      213: -6168834022094023127
+    second: babyBoySideL_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -134,13 +134,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RobotFrontFix_0
+      name: babyBoySideL_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 30
-        width: 78
-        height: 121
+        x: 15
+        y: 87
+        width: 68
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,20 +148,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab9ddb818bb50594f8fe57c4b8ac68f4
-      internalID: -694563421349494164
+      spriteID: cdf0ff63bb1d6ed49a61b133df617cad
+      internalID: 7039576453462880410
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotFrontFix_1
+      name: babyBoySideL_1
       rect:
         serializedVersion: 2
-        x: 89
-        y: 30
+        x: 94
+        y: 87
+        width: 60
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf30706a781838f4d9655e829c069d9c
+      internalID: -7226936661693897563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: babyBoySideL_2
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 7
         width: 74
-        height: 121
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +190,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 740e4fa0d9cf3af419ddd9df432af4f6
-      internalID: 3205659162527227798
+      spriteID: 278ca07c77afc454b9e031785699ab33
+      internalID: -30654284934708431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotFrontFix_2
+      name: babyBoySideL_3
       rect:
         serializedVersion: 2
-        x: 170
-        y: 30
-        width: 78
-        height: 121
+        x: 93
+        y: 7
+        width: 60
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,29 +211,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb79d80afda7cf547bb44883b59b729f
-      internalID: 5286025471455911598
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RobotFrontFix_3
-      rect:
-        serializedVersion: 2
-        x: 255
-        y: 30
-        width: 72
-        height: 121
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa98d256139f6f540b04150a01ea48a3
-      internalID: -4355272269101550845
+      spriteID: 8090bb12cb0a4624ab471e7648fad102
+      internalID: -6168834022094023127
       vertices: []
       indices: 
       edges: []

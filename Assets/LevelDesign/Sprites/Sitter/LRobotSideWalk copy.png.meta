@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 9f11bfdf86833134c9603060615add7e
+guid: 1f48c6c12c7f8ce4ebd28eee7ec86152
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -694563421349494164
-    second: RobotFrontFix_0
+      213: 2889856071222056742
+    second: LRobotSideWalk copy_0
   - first:
-      213: 3205659162527227798
-    second: RobotFrontFix_1
+      213: 2071521799485281932
+    second: LRobotSideWalk copy_1
   - first:
-      213: 5286025471455911598
-    second: RobotFrontFix_2
+      213: -90509519059246899
+    second: LRobotSideWalk copy_2
   - first:
-      213: -4355272269101550845
-    second: RobotFrontFix_3
+      213: -6621661740778994435
+    second: LRobotSideWalk copy_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -134,13 +134,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RobotFrontFix_0
+      name: LRobotSideWalk copy_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 30
-        width: 78
-        height: 121
+        x: 18
+        y: 21
+        width: 72
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,60 +148,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab9ddb818bb50594f8fe57c4b8ac68f4
-      internalID: -694563421349494164
+      spriteID: 6859947f37692bc45aa2cf6a9a408185
+      internalID: 2889856071222056742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RobotFrontFix_1
+      name: LRobotSideWalk copy_1
       rect:
         serializedVersion: 2
-        x: 89
-        y: 30
-        width: 74
-        height: 121
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 740e4fa0d9cf3af419ddd9df432af4f6
-      internalID: 3205659162527227798
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RobotFrontFix_2
-      rect:
-        serializedVersion: 2
-        x: 170
-        y: 30
-        width: 78
-        height: 121
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb79d80afda7cf547bb44883b59b729f
-      internalID: 5286025471455911598
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RobotFrontFix_3
-      rect:
-        serializedVersion: 2
-        x: 255
-        y: 30
+        x: 104
+        y: 21
         width: 72
         height: 121
       alignment: 0
@@ -211,8 +169,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa98d256139f6f540b04150a01ea48a3
-      internalID: -4355272269101550845
+      spriteID: 80509caacdb6ed248b91467e8eeb8978
+      internalID: 2071521799485281932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LRobotSideWalk copy_2
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 21
+        width: 72
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2211c5f27cae47646b3b0aa3af4bfb3c
+      internalID: -90509519059246899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LRobotSideWalk copy_3
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 21
+        width: 72
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1c71ec94d5c815469956a3f8fd9554a
+      internalID: -6621661740778994435
       vertices: []
       indices: 
       edges: []
