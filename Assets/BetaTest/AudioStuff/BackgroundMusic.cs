@@ -10,9 +10,4 @@ public class BackgroundMusic : AudioBase
     {
         DontDestroyOnLoad(gameObject);
     }
-
-    private void Start()
-    {
-        PlayAudio(backgroundMusic);
-    }
 }
