@@ -51,6 +51,7 @@ public class BabyInteract : Interaction
 
         meter.Sub(maxMultiplier);
         multiplier = 1;
+        _anim.SetBool("Clean", true);
     }
 
     public void AddToMultiplier(float magnitude)
