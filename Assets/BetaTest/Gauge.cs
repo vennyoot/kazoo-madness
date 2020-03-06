@@ -20,14 +20,7 @@ public abstract class Gauge : MonoBehaviour
     public Image meter;
     public RectTransform rect;
     //public GameObject source;
-
-    private void Awake()
-    {
-        meter = GetComponent<Image>();
-        rect = GetComponent<RectTransform>();
-        //source = transform.parent.parent.gameObject;
-    }
-
+    
     private void Update()
     {
         if (lerpPercent < 1 && update == true)
@@ -50,9 +43,7 @@ public abstract class Gauge : MonoBehaviour
         meter.fillAmount = Mathf.Lerp(prev, percent, lerpPercent);
         //10, 221, 0
         //133, 1, 23
-        meter.color = new Color(Mathf.Lerp(133f/255, 10f / 255,percent),
-            Mathf.Lerp( 1f/255, 221f / 255, percent),
-            Mathf.Lerp(23f/255, 0f, percent));
+        //meter.color = new Color(Mathf.Lerp(133f/255, 10f / 255,percent),Mathf.Lerp( 1f/255, 221f / 255, percent),Mathf.Lerp(23f/255, 0f, percent));
     }
 
     public virtual void Add(float magnitude)

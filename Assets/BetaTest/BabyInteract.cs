@@ -10,6 +10,13 @@ public class BabyInteract : Interaction
 
     BabyGauge meter;
 
+    private Animator _anim;
+
+    private void Start()
+    {
+        _anim = GetComponent<Animator>();
+    }
+
     // Update is called once per frame
     protected override void InteractInput()
     {
@@ -53,9 +60,12 @@ public class BabyInteract : Interaction
         multiplier += magnitude;
         meter.Add(magnitude/(maxMultiplier-1));
 
+        _anim.SetBool("Dirty", true);
+
         if (multiplier > maxMultiplier)
         {
             multiplier = maxMultiplier;
+            
         }
     }
 }

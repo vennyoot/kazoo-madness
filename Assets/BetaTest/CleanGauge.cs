@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class CleanGauge : Gauge
 {
@@ -16,6 +17,9 @@ public class CleanGauge : Gauge
 
     private void Start()
     {
+        meter = GetComponent<Image>();
+        rect = GetComponent<RectTransform>();
+
         if (!startDirty)
         {
             startFill = 1;

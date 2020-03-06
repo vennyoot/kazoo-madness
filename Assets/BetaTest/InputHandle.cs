@@ -53,6 +53,7 @@ public static class InputHandle
 
     public static Vector2 GetBabyMovement()
     {
+
         Vector2 temp = Vector2.zero;
 
         if (Input.GetKey(KeyCode.R))

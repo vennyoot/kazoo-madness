@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class HouseGauge : Gauge
 {
     public UnityEvent onEmpty;
     public UnityEvent onFull;
 
-    private void Start()
+    private void Awake()
     {
+        meter = GetComponent<Image>();
+        rect = GetComponent<RectTransform>();
         startFill = 1;
         Add(startFill);
     }
@@ -25,6 +28,7 @@ public class HouseGauge : Gauge
 
         if (percent == 0)
         {
+            Debug.Log("House meter empty?");
             onEmpty.Invoke();
         }
     }
