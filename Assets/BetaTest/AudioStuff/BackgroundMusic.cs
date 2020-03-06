@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BackgroundMusic : AudioBase
 {
-    AudioClip backgroundMusic;
+    public AudioClip backgroundMusic;
     private void Start()
     {
         audio.loop = true;
