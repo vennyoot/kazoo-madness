@@ -17,6 +17,7 @@ public class Bath : MonoBehaviour
         child.GetComponent<Animator>().SetBool("Bath", true);
         //start coroutine timer until baby regains movement
         StartCoroutine(EndBath());
+        child.GetComponent<Animator>().SetBool("Clean", true);
     }
 
     IEnumerator EndBath()
@@ -28,7 +29,7 @@ public class Bath : MonoBehaviour
         child.GetComponent<Collider2D>().enabled = true;
         child.GetComponent<BabyMove>().bath = false;
         child.GetComponent<Animator>().SetBool("Bath", false);
-        child.GetComponent<Animator>().SetBool("Clean", true);
+        
         child = null;
         
     }
