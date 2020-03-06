@@ -13,7 +13,6 @@ public class BackgroundMusic : AudioBase
 
     private void Start()
     {
-        audio.loop = true;
         PlayAudio(backgroundMusic);
     }
 }
